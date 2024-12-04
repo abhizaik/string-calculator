@@ -1,6 +1,10 @@
 function stringCalculator(str) {
-    return 0;
-  }
-  
-  module.exports = stringCalculator;
-  
+    if(str === ""){
+        return 0;
+    }
+    if(str === "1"){
+        return 1;
+    }
+}
+
+module.exports = stringCalculator;

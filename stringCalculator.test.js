@@ -4,8 +4,9 @@ const stringCalculator = require('./stringCalculator');
 // Test cases
 describe('stringCalculator function', () => {
 
-  test('should return the sum of string', () => {
-    expect(stringCalculator("")).toBe(0);
-  });
-  
+    test('should return the sum of string', () => {
+        expect(stringCalculator("")).toBe(0);
+        expect(stringCalculator("1")).toBe(1);
+    });
+
 });
