@@ -13,10 +13,22 @@ function stringCalculator(str) {
 
     // Handling custom delimiter
     let sum = 0
+    const negatives = [];
     const str_array = str.split(delimiter);
     str_array.forEach(element => {
-        sum += parseInt(element);
+        const number = parseInt(element);
+        if (number < 0) {
+            negatives.push(number);
+        } else {
+            sum += number;
+        }
     });
+
+    // show message if there are negative numbers
+    if (negatives.length > 0) {
+        throw new Error(`negative numbers not allowed ${negatives.join(",")}`);
+    }
+
     return sum;
 
 }
