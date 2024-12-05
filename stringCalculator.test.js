@@ -19,4 +19,8 @@ describe('stringCalculator function', () => {
         expect(stringCalculator("//;\n1;2")).toBe(3);
     });
 
+    test('check for negative numbers', () => {
+        expect(() => stringCalculator("1,-5,10,20")).toThrow("negative numbers not allowed -5");
+    });
+
 });
