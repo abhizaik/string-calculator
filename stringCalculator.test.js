@@ -11,4 +11,8 @@ describe('stringCalculator function', () => {
         expect(stringCalculator("1,5,10,20")).toBe(36);
     });
 
+    test('should treat \n same as comma', () => {
+        expect(stringCalculator("1\n5,10\n20")).toBe(36);
+    });
+
 });
