@@ -15,14 +15,16 @@ function stringCalculator(str) {
     let sum = 0
     const negatives = [];
     const str_array = str.split(delimiter);
-    str_array.forEach(element => {
+    for (const element of str_array) {
         const number = parseInt(element);
         if (number < 0) {
             negatives.push(number);
+        } else if (number > 1000) {
+            continue;
         } else {
             sum += number;
         }
-    });
+    };
 
     // show message if there are negative numbers
     if (negatives.length > 0) {
