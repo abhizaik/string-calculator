@@ -21,6 +21,7 @@ describe('stringCalculator function', () => {
     
     test('check for negative numbers', () => {
         expect(() => stringCalculator("1,-5,10,20")).toThrow("negative numbers not allowed -5");
+        expect(() => stringCalculator("1,-5,10,-20")).toThrow("negative numbers not allowed -5,-20");
     });
 
     test('numbers greater than 1000', () => {
