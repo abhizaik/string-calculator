@@ -18,9 +18,13 @@ describe('stringCalculator function', () => {
     test('support different delimiters', () => {
         expect(stringCalculator("//;\n1;2")).toBe(3);
     });
-
+    
     test('check for negative numbers', () => {
         expect(() => stringCalculator("1,-5,10,20")).toThrow("negative numbers not allowed -5");
+    });
+
+    test('numbers greater than 1000', () => {
+        expect(stringCalculator("2,1001")).toBe(2);
     });
 
 });
