@@ -15,4 +15,8 @@ describe('stringCalculator function', () => {
         expect(stringCalculator("1\n5,10\n20")).toBe(36);
     });
 
+    test('support different delimiters', () => {
+        expect(stringCalculator("//;\n1;2")).toBe(3);
+    });
+
 });
